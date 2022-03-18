@@ -15,16 +15,16 @@
 3. Setup Google Analytics Inside Project
 
 //App.js 
-
+  ``` 
   import ReactGA from 'react-ga4';
   const TRACKING_ID = "UA-XXXXX-X"; // OUR_TRACKING_ID
   ReactGA.initialize(TRACKING_ID);
-
+  ``` 
 
 4. Implementation (we can add GA events as below)
 
 //useAnalyticsEventTracker.jsx
-
+  ``` 
 import React from "react";
 import ReactGA from "react-ga4";
 
@@ -42,7 +42,7 @@ import useAnalyticsEventTracker from './useAnalyticsEventTracker';
 const ContactUs = () => {
   const gaEventTracker = useAnalyticsEventTracker('Contact us');
   return(
-   ``` <div>
+ <div>
     <h3>Contact Us</h3>
      <div> 
        <a href="#" onClick={()=>gaEventTracker('call')}>Call Us</a>
@@ -50,10 +50,11 @@ const ContactUs = () => {
      <div>
        <a href="mailto:someone@example.com" onClick={()=>gaEventTracker('email')}>Write to us</a>
       </div>
-  </div> ```
+  </div> 
   )
 };
 
+```
 
 
 
