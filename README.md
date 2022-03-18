@@ -1,30 +1,33 @@
-* React & Google Analytics
+# React & Google Analytics
 
-1. Create a base react project
+## 1. Create a base react project
 
-- $ yarn create react-app my-projectName
-
-
-
-2. Install Dependencies
-
-- $yarn add react-ga4
-
-
-
-3. Setup Google Analytics Inside Project
-
-//App.js 
   ``` 
+- $ yarn create react-app my-projectName
+  ``` 
+
+## 2. Install Dependencies
+
+  ``` 
+- $yarn add react-ga4
+  ``` 
+
+
+## 3. Setup Google Analytics Inside Project
+
+  ```
+  //App.js 
+   
   import ReactGA from 'react-ga4';
   const TRACKING_ID = "UA-XXXXX-X"; // OUR_TRACKING_ID
   ReactGA.initialize(TRACKING_ID);
   ``` 
 
-4. Implementation (we can add GA events as below)
+## 4. Implementation (we can add GA events as below)
 
+``` 
 //useAnalyticsEventTracker.jsx
-  ``` 
+  
 import React from "react";
 import ReactGA from "react-ga4";
 
@@ -57,17 +60,16 @@ const ContactUs = () => {
 ```
 
 
+## 5. Run application 
 
-5. Run application 
-
+```
 $ yarn start
+```
+
+
+## 6. Check the real time events on Goodle Analytics!!
 
 
 
-
-6. Check the real time events on Goodle Analytics!!
-
-
-
-Source: 
+## Source: 
 https://blog.saeloun.com/2022/02/17/how-to-integrate-react-app-with-google-analytics.html
