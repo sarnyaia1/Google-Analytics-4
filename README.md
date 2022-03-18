@@ -1,8 +1,9 @@
-***** React & Google Analytics: How to Integrate GA4 in React? ******
+* React & Google Analytics
 
 1. Create a base react project
 
 - $ yarn create react-app my-projectName
+
 
 
 2. Install Dependencies
@@ -41,7 +42,7 @@ import useAnalyticsEventTracker from './useAnalyticsEventTracker';
 const ContactUs = () => {
   const gaEventTracker = useAnalyticsEventTracker('Contact us');
   return(
-<!--   <div>
+   ``` <div>
     <h3>Contact Us</h3>
      <div> 
        <a href="#" onClick={()=>gaEventTracker('call')}>Call Us</a>
@@ -49,7 +50,7 @@ const ContactUs = () => {
      <div>
        <a href="mailto:someone@example.com" onClick={()=>gaEventTracker('email')}>Write to us</a>
       </div>
-  </div> -->
+  </div> ```
   )
 };
 
