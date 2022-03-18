@@ -2,8 +2,7 @@
 
 1. Create a base react project
 
-https://aensys.atlassian.net/wiki/spaces/VI/pages/6332416073/React+Javascript+base+project
-
+- $ yarn create react-app my-projectName
 
 
 2. Install Dependencies
