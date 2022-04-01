@@ -1,10 +1,5 @@
-import ReactGA from 'react-ga4';
-/* eslint-disable react/jsx-filename-extension */
 import logo from './logo.svg';
 import './App.css';
-
-const TRACKING_ID = 'UA-223167131-1'; // OUR_TRACKING_ID
-ReactGA.initialize(TRACKING_ID);
 
 function App() {
   return (
@@ -20,7 +15,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Lets do some tests!!!
+          Learn React
         </a>
       </header>
     </div>

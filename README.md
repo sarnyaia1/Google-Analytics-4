@@ -1,75 +1,51 @@
-# React & Google Analytics
+# React & Google Analytics 4
 
 ## 1. Create a base react project
 
-  ``` 
-- $ yarn create react-app my-projectName
-  ``` 
-
-## 2. Install Dependencies
-
-  ``` 
-- $yarn add react-ga4
-  ``` 
+```
+yarn create react-app my-app
+```
 
 
-## 3. Setup Google Analytics Inside Project
-
-  ```
-  //App.js 
-   
-  import ReactGA from 'react-ga4';
-  const TRACKING_ID = "UA-XXXXX-X"; // OUR_TRACKING_ID
-  ReactGA.initialize(TRACKING_ID);
-  ``` 
-
-## 4. Implementation (we can add GA events as below)
+## 2. Integrate Google Analytics 4
 
 ``` 
-//useAnalyticsEventTracker.jsx
-  
-import React from "react";
-import ReactGA from "react-ga4";
+yarn add react-ga4
+``` 
 
-const useAnalyticsEventTracker = (category="Blog category") => {
-  const eventTracker = (action = "test action", label = "test label") => {
-    ReactGA.event({category, action, label});
-  }
-  return eventTracker;
-}
-export default useAnalyticsEventTracker;
+```
+yarn build
+```
 
-//GA-buttonTest.jsx
-import useAnalyticsEventTracker from './useAnalyticsEventTracker';
+## 3. Create new Analytics Property
 
-const ContactUs = () => {
-  const gaEventTracker = useAnalyticsEventTracker('Contact us');
-  return(
- <div>
-    <h3>Contact Us</h3>
-     <div> 
-       <a href="#" onClick={()=>gaEventTracker('call')}>Call Us</a>
-      </div>
-     <div>
-       <a href="mailto:someone@example.com" onClick={()=>gaEventTracker('email')}>Write to us</a>
-      </div>
-  </div> 
-  )
-};
+- Build project in Netlify.com
+- Create a new property in Google Analytics
+- Don’t select advanced and Universal tracking
+- Now after the setup, pick the “web” data stream.
+- Enter your website URL and continue (Netlify link)
+- Select the Global site tag (gtag.js) option and copy the code.
+- Paste the code to public/index.html head tag
 
+
+## 4. Run React application 
+
+```
+yarn start
 ```
 
 
-## 5. Run application 
+## 5. Check the real time events on Goodle Analytics!!
 
-```
-$ yarn start
-```
+- Realtime overview
 
-
-## 6. Check the real time events on Goodle Analytics!!
-
+![This is an img](screenshot.png)
 
 
 ## Source: 
-https://blog.saeloun.com/2022/02/17/how-to-integrate-react-app-with-google-analytics.html
+https://tamalweb.com/google-analytics-with-reactjs
+
+
+
+
+
